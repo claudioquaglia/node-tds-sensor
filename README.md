@@ -2,7 +2,9 @@
 [![npm](https://img.shields.io/npm/v/node-tds-sensor.svg?label=npm%20package)](https://www.npmjs.com/package/node-tds-sensor)
 [![npm](https://img.shields.io/npm/dm/node-tds-sensor.svg)](https://www.npmjs.com/package/node-tds-sensor)
 
-# Node TDS sensor
+# [WIP] Node TDS sensor
+
+> This package is under development
 
 A simple Node.js module for read water TDS and EC, using compatible module
 
