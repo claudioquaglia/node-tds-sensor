@@ -11,7 +11,6 @@ export declare class TDSLib {
   public getKValue(): number;
   public getECValue(): number;
   public getTDSValue(): number;
-  public getTemperature(): number;
 }
 
 const addon = require('../build/Release/addon');
