@@ -1,0 +1,68 @@
+{
+  "name": "node-tds-sensor",
+  "version": "0.0.1",
+  "description": "Read data from TDS sensors with Node.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/claudioquaglia/node-tds-sensor"
+  },
+  "author": {
+    "name": "Claudio Quaglia",
+    "email": "claudio.quaglia@codemania.it",
+    "url": "https://www.codemania.it"
+  },
+  "keywords": [
+    "TDS",
+    "EC",
+    "Gravity TDS",
+    "TDS sensor",
+    "EC sensor",
+    "TDS meter",
+    "EC meter",
+    "raspberry",
+    "raspberry pi",
+    "rpi"
+  ],
+  "files": [
+    "lib",
+    "build"
+  ],
+  "gypfile": true,
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "clean": "rimraf lib && rimraf coverage",
+    "format": "prettier --write \"{src,tests}/**/*.ts\" --single-quote --trailing-comma es5",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
+    "build": "npm run build:cc && npm run build:ts",
+    "build:ts": "tsc --pretty",
+    "build:cc": "node-gyp rebuild",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "node-addon-api": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "coveralls": "^3.1.0",
+    "glob": "^7.1.6",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
