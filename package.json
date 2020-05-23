@@ -25,7 +25,8 @@
   ],
   "files": [
     "lib",
-    "build"
+    "build",
+    "/binding.gyp"
   ],
   "gypfile": true,
   "main": "lib/index",
