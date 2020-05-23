@@ -1,6 +1,6 @@
 {
   "name": "node-tds-sensor",
-  "version": "0.0.1-0",
+  "version": "0.0.1-1",
   "description": "Read data from TDS sensors with Node.js",
   "license": "MIT",
   "repository": {
