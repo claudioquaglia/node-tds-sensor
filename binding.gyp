@@ -2,7 +2,11 @@
   'targets': [
     {
       'target_name': 'addon',
-      'sources' : ["<!@(node -p \"require('glob').sync('./ccSrc/**/*.@(c|cc|cpp)').map(x => x.replace(/^\.\//g, '')).join(' ')\")"],
+      'sources' : [
+        "ccSrc/ads1115/ads1115_rpi.c",
+        "ccSrc/TDSLib.cc",
+        "ccSrc/addon.cc"
+      ],
       'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")"],
       'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
       'cflags!': [ '-fno-exceptions' ],
